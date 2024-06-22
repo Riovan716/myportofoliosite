@@ -106,7 +106,7 @@ nav {
   position: absolute;
   top: -15px;
   right: -20px;
-  font-size: 5em;
+  font-size: 4em;
   color: var(--text-color-second);
 }
 .nav-menu,
@@ -186,16 +186,21 @@ nav {
 .featured-text-card span {
   background: var(--third-color);
   color: var(--color-white);
-  padding: 3px 8px;
-  font-size: 12px;
+  padding: 2px 50px;
+  font-size: 25px;
   border-radius: 5px;
+}
+
+.featured-text-card {
+  margin-bottom: 1.3rem;
 }
 .featured-name {
   font-size: 50px;
   font-weight: 600;
   color: var(--text-color-second);
-  margin-block: 20px;
+  margin-block: 30px;
 }
+
 .typedText {
   text-transform: capitalize;
   color: var(--text-color-third);
@@ -283,6 +288,7 @@ nav {
   background: var(--color-white);
   border-radius: 30px;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25);
+  margin-bottom: 4rem;
 }
 .scroll-btn i {
   font-size: 20px;
