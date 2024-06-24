@@ -480,50 +480,73 @@ h3 {
   z-index: 2;
 }
 /* ----- CONTACT FORM ----- */
+/* CSS untuk formulir kontak */
 .form-control {
   display: flex;
   flex-direction: column;
   gap: 10px;
   width: 100%;
 }
-.form-inputs {
-  display: flex;
-  gap: 10px;
+
+.contact-form {
+  /* Menambahkan margin untuk memisahkan dari tepi kolom */
+  margin: 20px;
+}
+
+.contact-form div {
+  margin-bottom: 1rem;
+}
+.contact-form input,
+.contact-form textarea {
   width: 100%;
+  padding: 0.75rem 1.3rem;
+  font-family: "Roboto", sans-serif;
+  background: #e4e4e4;
+  border: #1c15ea;
+  border-radius: 3px;
+  resize: none;
 }
-.input-field {
-  width: 50%;
-  height: 55px;
-  background: transparent;
-  border: 2px solid #aaa;
-  border-radius: 10px;
-  padding-inline: 20px;
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #9d9fa1;
+  resize: none;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
   outline: none;
+  border: 1px solid #000000;
 }
+
 textarea {
   width: 100%;
-  height: 250px;
+  height: 100px;
   background: transparent;
   border: 2px solid #aaa;
   border-radius: 10px;
   padding: 15px 20px;
   outline: none;
-  resize: none;
+  resize: vertical; /* Mengubah resize agar vertikal */
+  font-size: 16px; /* Menambahkan ukuran font agar seragam */
 }
-.form-button > .btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: var(--second-color);
+
+.btn-submit {
+  width: 100%; /* Menyamakan lebar tombol dengan input field */
+  height: 55px;
+  background-color: var(--second-color); /* Menggunakan variabel warna */
   color: var(--color-white);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px; /* Menambahkan ukuran font agar seragam */
+  transition: background-color 0.3s ease; /* Efek transisi hover */
 }
-.form-button > .btn:hover {
-  background: #00b5e7;
+
+.btn-submit:hover {
+  background-color: #1c15ea; /* Warna latar belakang saat tombol dihover */
 }
-.form-button i {
-  font-size: 18px;
-  rotate: -45deg;
-}
+
 /* ----- FOOTER BOX ----- */
 footer {
   display: flex;
