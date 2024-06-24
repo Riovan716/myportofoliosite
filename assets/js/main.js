@@ -9,65 +9,6 @@ function myMenuFunction() {
   }
 }
 
-//modal box
-
-const itemDetailModal = document.querySelector("#item-detail-modal");
-const itemDetailModal1 = document.querySelector("#item-detail-modal1");
-const itemDetailModal2 = document.querySelector("#item-detail-modal2");
-const itemDetailButtons = document.querySelectorAll(".item-detail-button");
-const itemDetailButtons1 = document.querySelectorAll(".item-detail-button1");
-const itemDetailButtons2 = document.querySelectorAll(".item-detail-button2");
-
-itemDetailButtons.forEach((btn) => {
-  btn.onclick = (e) => {
-    itemDetailModal.style.display = "flex";
-    e.preventDefault();
-  };
-});
-
-itemDetailButtons1.forEach((btn) => {
-  btn.onclick = (e) => {
-    itemDetailModal1.style.display = "flex";
-    e.preventDefault();
-  };
-});
-
-itemDetailButtons2.forEach((btn) => {
-  btn.onclick = (e) => {
-    itemDetailModal2.style.display = "flex";
-    e.preventDefault();
-  };
-});
-
-//close icon modal
-
-document.querySelector(".modal .close-icon").onclick = (e) => {
-  itemDetailModal.style.display = "none";
-  e.preventDefault();
-};
-
-document.querySelector(".modal1 .close-icon").onclick = (e) => {
-  itemDetailModal1.style.display = "none";
-  e.preventDefault();
-};
-
-document.querySelector(".modal2 .close-icon").onclick = (e) => {
-  itemDetailModal2.style.display = "none";
-  e.preventDefault();
-};
-
-//klik diluar modal
-
-window.onclick = (e) => {
-  if (e.target === itemDetailModal) {
-    itemDetailModal.style.display = "none";
-  } else if (e.target === itemDetailModal1) {
-    itemDetailModal1.style.display = "none";
-  } else if (e.target === itemDetailModal2) {
-    itemDetailModal2.style.display = "none";
-  }
-};
-
 /* ----- ADD SHADOW ON NAVIGATION BAR WHILE SCROLLING ----- */
 window.onscroll = function () {
   headerShadow();
@@ -168,3 +109,62 @@ function scrollActive() {
 }
 
 window.addEventListener("scroll", scrollActive);
+
+//modal box
+
+const itemDetailModal = document.querySelector("#item-detail-modal");
+const itemDetailModal1 = document.querySelector("#item-detail-modal1");
+const itemDetailModal2 = document.querySelector("#item-detail-modal2");
+const itemDetailButtons = document.querySelectorAll(".item-detail-button");
+const itemDetailButtons1 = document.querySelectorAll(".item-detail-button1");
+const itemDetailButtons2 = document.querySelectorAll(".item-detail-button2");
+
+itemDetailButtons.forEach((btn) => {
+  btn.onclick = (e) => {
+    itemDetailModal.style.display = "flex";
+    e.preventDefault();
+  };
+});
+
+itemDetailButtons1.forEach((btn) => {
+  btn.onclick = (e) => {
+    itemDetailModal1.style.display = "flex";
+    e.preventDefault();
+  };
+});
+
+itemDetailButtons2.forEach((btn) => {
+  btn.onclick = (e) => {
+    itemDetailModal2.style.display = "flex";
+    e.preventDefault();
+  };
+});
+
+//close icon modal
+
+document.querySelector(".modal .close-icon").onclick = (e) => {
+  itemDetailModal.style.display = "none";
+  e.preventDefault();
+};
+
+document.querySelector(".modal1 .close-icon").onclick = (e) => {
+  itemDetailModal1.style.display = "none";
+  e.preventDefault();
+};
+
+document.querySelector(".modal2 .close-icon").onclick = (e) => {
+  itemDetailModal2.style.display = "none";
+  e.preventDefault();
+};
+
+//klik diluar modal
+
+window.onclick = (e) => {
+  if (e.target === itemDetailModal) {
+    itemDetailModal.style.display = "none";
+  } else if (e.target === itemDetailModal1) {
+    itemDetailModal1.style.display = "none";
+  } else if (e.target === itemDetailModal2) {
+    itemDetailModal2.style.display = "none";
+  }
+};
