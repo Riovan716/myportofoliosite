@@ -204,18 +204,30 @@
             </div>
             <div class="col">
               <div class="form-control">
-                <div class="form-inputs">
-                  <input type="text" class="input-field" placeholder="Name" />
-                  <input type="text" class="input-field" placeholder="Email" />
-                </div>
-                <div class="text-area">
-                  <textarea placeholder="Message"></textarea>
-                </div>
-                <div class="form-button">
-                  <button class="btn">
-                    Send <i class="uil uil-message"></i>
-                  </button>
-                </div>
+                <form
+                  action="https://formspree.io/f/mwpeebgd"
+                  method="POST"
+                  class="contact-form"
+                >
+                  <div>
+                    <input type="text" placeholder="Name" name="name" />
+                  </div>
+                  <div>
+                    <input type="email" placeholder="Email" name="email" />
+                  </div>
+                  <div>
+                    <textarea
+                      name="message"
+                      id="message"
+                      cols="30"
+                      rows="10"
+                      placeholder="Message"
+                    ></textarea>
+                  </div>
+                  <div>
+                    <button class="btn-submit">Send Message</button>
+                  </div>
+                </form>
               </div>
             </div>
           </div>
