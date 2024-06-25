@@ -765,24 +765,25 @@ footer {
     display: none;
   }
   .nav-menu.responsive {
-    left: 0;
+    right: 0;
   }
   .nav-menu {
     position: fixed;
     top: 80px;
-    left: -100%;
+    right: -100%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background: rgba(255, 255, 255, 0.7);
-    backdrop-filter: blur(20px);
-    width: 100%;
+    backdrop-filter: blur(40px);
+    width: 30%;
     min-height: 450px;
-    height: 90vh;
-    transition: 0.3s;
+    height: 100vh;
+    transition: 0.5s;
   }
   .nav_menu_list {
     flex-direction: column;
+    margin-bottom: 30rem;
   }
   .nav-menu-btn {
     display: flex;
