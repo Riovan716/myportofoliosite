@@ -65,7 +65,7 @@ body {
   background: var(--body-color);
 }
 .container {
-  width: 100%;
+  width: 90%;
   position: relative;
 }
 /* ----- NAVIGATION BAR ----- */
@@ -78,7 +78,7 @@ nav {
   line-height: 90px;
   background: var(--body-color);
   padding-inline: 5vw;
-  transition: 0.3s;
+  transition: 0.5s;
   z-index: 100;
 }
 .nav-logo {
@@ -99,6 +99,7 @@ nav {
 .nav-menu,
 .nav_menu_list {
   display: flex;
+  height: 18rem;
 }
 .nav-menu .nav_list {
   list-style: none;
