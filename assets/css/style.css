@@ -65,7 +65,7 @@ body {
   background: var(--body-color);
 }
 .container {
-  width: 90%;
+  width: 94%;
   position: relative;
 }
 /* ----- NAVIGATION BAR ----- */
@@ -750,7 +750,7 @@ footer {
 }
 
 /* ----- MEDIA QUERY == 1024px / RESPONSIVE ----- */
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1200px) {
   .featured-text {
     padding: 0;
   }
@@ -761,7 +761,7 @@ footer {
   }
 }
 /* ----- MEDIA QUERY == 900px / RESPONSIVE ----- */
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1050px) {
   .nav-button {
     display: none;
   }
@@ -770,13 +770,13 @@ footer {
   }
   .nav-menu {
     position: fixed;
-    top: 80px;
+    top: 90px;
     right: -100%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background: rgba(255, 255, 255, 0.7);
-    backdrop-filter: blur(40px);
+    backdrop-filter: blur(20px);
     width: 30%;
     min-height: 450px;
     height: 100vh;
