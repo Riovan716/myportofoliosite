@@ -1,18 +1,35 @@
-/* ----- NAVIGATION BAR FUNCTION ----- */
 function myMenuFunction() {
   var menuBtn = document.getElementById("myNavMenu");
+  var navLogo = document.querySelector(".nav-logo");
 
-  if (menuBtn.className === "nav-menu") {
-    menuBtn.className += " responsive";
+  if (menuBtn.classList.contains("responsive")) {
+    menuBtn.classList.remove("responsive");
   } else {
-    menuBtn.className = "nav-menu";
+    menuBtn.classList.add("responsive");
   }
-}
 
-/* ----- ADD SHADOW ON NAVIGATION BAR WHILE SCROLLING ----- */
-window.onscroll = function () {
-  headerShadow();
-};
+  // Menutup navbar jika logo atau area di luar navbar diklik
+  navLogo.addEventListener("click", function () {
+    if (menuBtn.classList.contains("responsive")) {
+      menuBtn.classList.remove("responsive");
+    }
+  });
+
+  document.addEventListener("click", function (event) {
+    var isClickInsideNav = menuBtn.contains(event.target);
+    var isClickInsideNavBtn = document
+      .querySelector(".nav-menu-btn")
+      .contains(event.target);
+
+    if (
+      !isClickInsideNav &&
+      !isClickInsideNavBtn &&
+      menuBtn.classList.contains("responsive")
+    ) {
+      menuBtn.classList.remove("responsive");
+    }
+  });
+}
 
 function headerShadow() {
   const navHeader = document.getElementById("header");
