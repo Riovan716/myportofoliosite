@@ -167,23 +167,31 @@ nav {
   background: var(--third-color);
   color: var(--color-white);
   padding: 3px 8px;
-  font-size: 12px;
+  font-size: 22px;
   border-radius: 5px;
 }
 .featured-name {
-  font-size: 50px;
+  font-size: 52px;
   font-weight: 600;
   color: var(--text-color-second);
   margin-block: 20px;
 }
+
+.featured-name p {
+  font-size: 25px;
+}
+
 .typedText {
   text-transform: capitalize;
   color: var(--text-color-third);
 }
 .featured-text-info {
   font-size: 15px;
-  margin-bottom: 30px;
+  margin-top: 10px;
   color: var(--text-color-second);
+  font-style: unset;
+  font-size: medium;
+  font-weight: 600;
 }
 .featured-text-btn {
   display: flex;
@@ -304,13 +312,14 @@ h3 {
   position: relative;
   display: flex;
   flex-direction: column;
-  padding-block: 30px 70px;
+  padding-block: 40px 70px;
   padding-inline: 20px;
   width: 100%;
   background: var(--color-white);
   box-shadow: 1px 8px 10px 2px var(--first-shadow-color);
   border-radius: 20px;
 }
+
 .about-info p {
   font-size: 1rem;
   font-family: "Times New Roman";
@@ -328,14 +337,12 @@ h3 {
   background: var(--second-color);
 }
 /* ----- ABOUT / SKILLS BOX ----- */
-.skills-box {
-  margin: 10px;
-}
+
 .skills-header {
   position: relative;
   display: flex;
   flex-direction: column;
-  padding-block: 30px 70px;
+  padding-block: 40px 80px;
   padding-inline: 20px;
   width: 100%;
   background: var(--color-white);
@@ -457,6 +464,11 @@ h3 {
   box-shadow: 1px 8px 10px 2px var(--first-shadow-color);
   overflow: hidden;
 }
+
+.contact-info p {
+  font-size: 12px;
+}
+
 .contact-info > h2 {
   color: var(--color-white);
   margin-bottom: 20px;
@@ -545,7 +557,7 @@ textarea {
 }
 
 .btn-submit:hover {
-  background-color: #1c15ea; /* Warna latar belakang saat tombol dihover */
+  background-color: #19ea15; /* Warna latar belakang saat tombol dihover */
 }
 
 /* ----- FOOTER BOX ----- */
@@ -756,8 +768,8 @@ footer {
   }
   .image,
   .image img {
-    width: 320px;
-    height: 320px;
+    width: 350px;
+    height: 350px;
   }
 }
 /* ----- MEDIA QUERY == 900px / RESPONSIVE ----- */
@@ -777,7 +789,7 @@ footer {
     align-items: center;
     background: rgba(255, 255, 255, 0.7);
     backdrop-filter: blur(20px);
-    width: 30%;
+    width: 50%;
     min-height: 450px;
     height: 100vh;
     transition: 0.5s;
@@ -811,12 +823,12 @@ footer {
     justify-content: center;
     min-height: 150px;
     width: 100%;
-    margin-top: 65px;
+    margin-top: 100px;
   }
   .image,
   .image img {
-    width: 150px;
-    height: 150px;
+    width: 230px;
+    height: 230px;
   }
   .row {
     display: flex;
