@@ -65,7 +65,7 @@ body {
   background: var(--body-color);
 }
 .container {
-  width: 90%;
+  width: 92.5%;
   position: relative;
 }
 /* ----- NAVIGATION BAR ----- */
