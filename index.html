@@ -1,360 +1,748 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- --------- UNICONS ---------- -->
-    <link
-      rel="stylesheet"
-      href="https://unicons.iconscout.com/release/v4.0.8/css/line.css"
-    />
-    <!-- --------- CSS ---------- -->
-    <link rel="stylesheet" href="assets/css/style.css" />
-    <!-- --------- FAVICON ---------- -->
-    <link
-      rel="shortcut icon"
-      href="assets/images/logo.png"
-      type="image/x-icon"
-    />
-    <!-- awesome icons -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <title>Portfolio | Riovan</title>
-  </head>
 
-  <body>
-    <div class="container">
-      <!-- --------------- HEADER --------------- -->
-      <nav id="header">
-        <div class="nav-logo">
-          <p class="nav-name">Riovan Samuel</p>
-          <span>.</span>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Riovan Samuel Sihombing - Fullstack Software Engineer & Informatics Student. Explore my projects, work experience, and developer skills." />
+
+  <!-- --------- UNICONS & FONT AWESOME ---------- -->
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- --------- CSS ---------- -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+
+  <!-- --------- FAVICON ---------- -->
+  <link rel="shortcut icon" href="assets/images/logo.png" type="image/x-icon" />
+
+  <title>Riovan Samuel Sihombing | Portfolio</title>
+</head>
+
+<body>
+  <!-- --------------- HEADER --------------- -->
+  <header>
+    <nav id="header">
+      <div class="nav-logo">
+        <p class="nav-name">Riovan Samuel</p>
+      </div>
+      <div class="nav-menu" id="myNavMenu">
+        <ul class="nav_menu_list">
+          <li class="nav_list">
+            <a href="#home" class="nav-link active-link">Home</a>
+          </li>
+          <li class="nav_list">
+            <a href="#about" class="nav-link">About</a>
+          </li>
+          <li class="nav_list">
+            <a href="#skills" class="nav-link">Skills</a>
+          </li>
+          <li class="nav_list">
+            <a href="#experience" class="nav-link">Experience</a>
+          </li>
+          <li class="nav_list">
+            <a href="#work-experience" class="nav-link">Work Experience</a>
+          </li>
+          <li class="nav_list">
+            <a href="#projects" class="nav-link">Projects</a>
+          </li>
+          <li class="nav_list">
+            <a href="#organizations" class="nav-link">Organizations</a>
+          </li>
+          <li class="nav_list">
+            <a href="#contact" class="nav-link">Contact</a>
+          </li>
+        </ul>
+      </div>
+      <div class="nav-button">
+        <a href="assets/cv.pdf" target="_blank" rel="noopener noreferrer">
+          <button class="btn">
+            Download CV <i class="uil uil-file-alt"></i>
+          </button>
+        </a>
+      </div>
+      <div class="nav-menu-btn">
+        <i class="uil uil-bars" onclick="myMenuFunction()"></i>
+      </div>
+    </nav>
+  </header>
+
+  <!-- -------------- MAIN ---------------- -->
+  <main class="wrapper">
+
+    <!-- -------------- FEATURED BOX (HERO) ---------------- -->
+    <section class="featured-box" id="home">
+      <div class="featured-text">
+        <div class="featured-text-card">
+          <span>Riovan Samuel Sihombing</span>
         </div>
-        <div class="nav-menu" id="myNavMenu">
-          <ul class="nav_menu_list">
-            <li class="nav_list">
-              <a href="#home" class="nav-link active-link">Home</a>
-              <div class="circle"></div>
-            </li>
-            <li class="nav_list">
-              <a href="#about" class="nav-link">About</a>
-              <div class="circle"></div>
-            </li>
-            <li class="nav_list">
-              <a href="#projects" class="nav-link">Portofolio</a>
-              <div class="circle"></div>
-            </li>
-            <li class="nav_list">
-              <a href="#contact" class="nav-link">Contact</a>
-              <div class="circle"></div>
-            </li>
-          </ul>
+        <div class="featured-name">
+          <p>Hi, I am <span class="typedText"></span></p>
         </div>
-        <div class="nav-button">
-          <a
-            href="https://drive.google.com/file/d/19QQ8Cf98nbUvLdWJfmPYPDeWmWC8L5Qh/view?usp=drive_link"
-            target="_blank"
-            download
-          >
+        <div class="featured-text-info">
+          <p>
+            A passionate Software Engineer and Informatics Engineering student at Institut Teknologi Del.
+            Proficient in PHP, JavaScript, and TypeScript, dedicated to crafting secure, high-performance,
+            and scalable web and desktop solutions.
+          </p>
+        </div>
+        <div class="featured-text-btn">
+          <a href="#contact" class="btn-link"><button class="btn blue-btn">Hire Me</button></a>
+          <a href="assets/cv.pdf" target="_blank" rel="noopener noreferrer">
             <button class="btn">
               Download CV <i class="uil uil-file-alt"></i>
             </button>
           </a>
         </div>
-        <div class="nav-menu-btn">
-          <i class="uil uil-bars" onclick="myMenuFunction()"></i>
-        </div>
-      </nav>
-      <!-- -------------- MAIN ---------------- -->
-      <main class="wrapper">
-        <!-- -------------- FEATURED BOX ---------------- -->
-        <section class="featured-box" id="home">
-          <div class="featured-text">
-            <div class="featured-text-card">
-              <span>Riovan samuel</span>
-            </div>
-            <div class="featured-text-info">
-              <p>&nbsp;&nbsp;YESAYA 41:10</p>
-            </div>
-            <div class="featured-name">
-              <p>LIBUR = <span class="typedText"></span></p>
-            </div>
-            <div class="featured-text-btn">
-              <button class="btn blue-btn">Hire Me</button>
-              <a
-                href="https://drive.google.com/file/d/19QQ8Cf98nbUvLdWJfmPYPDeWmWC8L5Qh/view?usp=drive_link"
-                target="_blank"
-                download
-              >
-                <button class="btn">
-                  Download CV <i class="uil uil-file-alt"></i>
-                </button>
-              </a>
-            </div>
 
-            <div class="social_icons">
-              <a href="https://www.instagram.com/riovan_samuel/" target="_blank"
-                ><i class="fa-brands fa-instagram"></i
-              ></a>
-              <a
-                href="https://www.linkedin.com/in/riovan-samuel-sihombing-044477285/"
-                target="_blank"
-                ><i class="fa-brands fa-linkedin"></i
-              ></a>
-              <a href="https://wa.me/6281376463374/?text=hello" target="_blank"
-                ><i class="fa-brands fa-whatsapp"></i>
-              </a>
-            </div>
+        <div class="social_icons">
+          <a href="https://github.com/Riovan716" target="_blank" rel="noopener noreferrer" title="GitHub"><i
+              class="fa-brands fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/riovan-samuel-sihombing-044477285/" target="_blank"
+            rel="noopener noreferrer" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://wa.me/6281376463374/?text=Hello%20Riovan" target="_blank" rel="noopener noreferrer"
+            title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="https://www.instagram.com/riovan_samuel/" target="_blank" rel="noopener noreferrer"
+            title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+      </div>
+      <div class="featured-image">
+        <div class="image-container">
+          <div class="image">
+            <img src="assets/images/riovan.png" alt="Riovan Samuel Sihombing" />
           </div>
-          <div class="featured-image">
-            <div class="image">
-              <img src="assets/images/riovan.png" alt="riovan" />
-            </div>
-          </div>
-        </section>
-        <!-- -------------- ABOUT BOX ---------------- -->
-        <section class="section" id="about">
-          <div class="top-header">
-            <h1>About Me</h1>
-          </div>
-          <div class="row">
-            <div class="col">
-              <div class="about-info">
-                <h3>My introduction</h3>
-                <p>
-                  I am well-versed in HTML, CSS and JavaScript , and other
-                  cutting edge frameworks and libraries,which allows me to
-                  implement interactive features. Additionally, I have
-                  experirence working with content management systems (CMS) like
-                  WordPress.
-                </p>
-              </div>
-            </div>
-            <div class="col">
-              <div class="skills-box">
-                <div class="skills-header">
-                  <h3>Education</h3>
-                  <p>
-                    Bachelor Degree in Informatics, 3.49/4.00 <br />
-                    Institut Teknologi Del
-                  </p>
-                  <h1>
-                    Here are the relevant courses I've completed: Visual
-                    Programming, Procedural Programming, Object-Oriented
-                    Programming (OOP), Databases, Software Engineering,
-                    Algorithms and Data Structures, Discrete Mathematics,
-                    Probability and Statistics, Artificial Intelligence, Web
-                    Application Programming and Testing, Systems Analysis and
-                    Design. In terms of soft skills, I have experience in
-                    education, leadership, and fostering discipline.
-                  </h1>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="cv">
-            <div class="cv1">
-              <div class="about-btn">
-                <a
-                  href="https://drive.google.com/file/d/19QQ8Cf98nbUvLdWJfmPYPDeWmWC8L5Qh/view?usp=drive_link"
-                  target="_blank"
-                  download
-                >
-                  <button class="btn">
-                    Download CV <i class="uil uil-file-alt"></i>
-                  </button>
-                </a>
-              </div>
-            </div>
-          </div>
-        </section>
-        <!-- -------------- PROJECT BOX ---------------- -->
-        <section class="section" id="projects">
-          <div class="top-header">
-            <h1>PORTOFOLIO</h1>
-          </div>
-          <div class="project-container">
-            <div class="project-box">
-              <i class="uil uil-briefcase-alt"></i>
-              <h3>My Projects</h3>
-              <label>completed</label>
-              <a href="#" class="item-detail-button"
-                ><i class="fa-regular fa-eye"></i
-              ></a>
-            </div>
-            <div class="project-box">
-              <i class="uil uil-award"></i>
-              <h3>Experience</h3>
-              <label>IT DEL</label>
-              <a href="#" class="item-detail-button1"
-                ><i class="fa-regular fa-eye"></i
-              ></a>
-            </div>
-            <div class="project-box">
-              <i class="uil uil-users-alt"></i>
-              <h3>hobby</h3>
-              <label>everyday fun</label>
+        </div>
+      </div>
+    </section>
 
-              <a href="#" class="item-detail-button2"
-                ><i class="fa-regular fa-eye"></i
-              ></a>
-            </div>
-          </div>
-        </section>
-        <!-- -------------- CONTACT BOX ---------------- -->
-        <section class="section" id="contact">
-          <div class="top-header">
-            <h1>Get in touch</h1>
-            <span>Let's Talk</span>
-          </div>
-          <div class="row">
-            <div class="col">
-              <div class="contact-info">
-                <h2>Find Me <i class="uil uil-corner-right-down"></i></h2>
-                <p>
-                  <i class="uil uil-envelope"></i> Email:
-                  riovansihombing3@gmail.com
-                </p>
-                <p><i class="uil uil-phone"></i> Tel: +62 81376463374</p>
+    <!-- -------------- ABOUT BOX ---------------- -->
+    <section class="section" id="about">
+      <div class="top-header">
+        <h1>About Me</h1>
+        <span>Introduction</span>
+      </div>
+
+      <div class="row">
+        <!-- Bio Column -->
+        <div class="col">
+          <div class="about-card">
+            <h3>My Story</h3>
+            <p>
+              I am a Software Engineer who loves bridging the gap between complex backend architectures and clean,
+              responsive user interfaces. My engineering journey started at IT Del, but it truly came alive while
+              shipping real-world systems—ranging from secure payment gateways and biometric face-recognition apps to
+              low-latency WebRTC streaming platforms.
+            </p>
+            <p>
+              For me, writing code is about solving tangible puzzles. I focus on writing clean, performance-optimized
+              code and structuring scalable databases. I thrive on diving into unfamiliar frameworks and collaborating
+              with multidisciplinary teams to ship reliable software solutions.
+            </p>
+            <div class="personal-info">
+              <div class="info-item">
+                <i class="uil uil-envelope"></i>
+                <span>riovansihombing3@gmail.com</span>
               </div>
-            </div>
-            <div class="col">
-              <div class="form-control">
-                <form
-                  action="https://formspree.io/f/mwpeebgd"
-                  method="POST"
-                  class="contact-form"
-                >
-                  <div>
-                    <input type="text" placeholder="Name" name="name" />
-                  </div>
-                  <div>
-                    <input type="email" placeholder="Email" name="email" />
-                  </div>
-                  <div>
-                    <textarea
-                      name="message"
-                      id="message"
-                      cols="30"
-                      rows="10"
-                      placeholder="Message"
-                    ></textarea>
-                  </div>
-                  <div>
-                    <button class="btn-submit">Send Message</button>
-                  </div>
-                </form>
+              <div class="info-item">
+                <i class="uil uil-phone"></i>
+                <span>+62 813-7646-3374</span>
+              </div>
+              <div class="info-item">
+                <i class="uil uil-map-marker"></i>
+                <span>Humbang Hasundutan, Sumatera Utara (22475)</span>
               </div>
             </div>
           </div>
-        </section>
-      </main>
-      <!-- --------------- FOOTER --------------- -->
-      <footer>
-        <div class="top-footer">
-          <p>Riovan Samuel .</p>
         </div>
-        <div class="middle-footer">
-          <ul class="footer-menu">
-            <li class="footer_menu_list">
-              <a href="#home">Home</a>
-            </li>
-            <li class="footer_menu_list">
-              <a href="#about">About</a>
-            </li>
-            <li class="footer_menu_list">
-              <a href="#projects">Portofolio</a>
-            </li>
-            <li class="footer_menu_list">
-              <a href="#contact">Contact</a>
-            </li>
-          </ul>
+
+        <!-- Education Column -->
+        <div class="col">
+          <div class="about-card">
+            <h3>Education</h3>
+            <div class="education-header">
+              <h4>Institut Teknologi Del</h4>
+              <span class="edu-date">August 2022 - August 2026 (Expected)</span>
+            </div>
+            <p class="edu-degree">Undergraduate in Informatics Engineering</p>
+            <div class="gpa-badge">
+              <i class="uil uil-graduation-cap"></i> GPA: <strong>3.64 / 4.00</strong>
+            </div>
+            <p class="courses-title">Relevant Coursework:</p>
+            <div class="courses-list">
+              <span>Procedural Programming</span>
+              <span>Object-Oriented Programming (OOP)</span>
+              <span>Visual Programming</span>
+              <span>Web Application Programming & Testing</span>
+              <span>Algorithms & Data Structures</span>
+              <span>Databases</span>
+              <span>Software Engineering</span>
+              <span>Systems Analysis & Design</span>
+              <span>Operating Systems</span>
+              <span>Artificial Intelligence</span>
+              <span>Probability & Statistics</span>
+            </div>
+          </div>
         </div>
-        <div class="social-icons">
-          <a href="https://www.instagram.com/riovan_samuel/" target="_blank"
-            ><i class="fa-brands fa-instagram"></i
-          ></a>
-          <a
-            href="https://www.linkedin.com/in/riovan-samuel-sihombing-044477285/"
-            target="_blank"
-            ><i class="fa-brands fa-linkedin"></i
-          ></a>
-          <a href="https://wa.me/6281376463374/?text=hello" target="_blank"
-            ><i class="fa-brands fa-whatsapp"></i>
+      </div>
+    </section>
+
+    <!-- -------------- SKILLS SHOWCASE ---------------- -->
+    <section class="section" id="skills">
+      <div class="top-header">
+        <h1>My Tech Stack</h1>
+        <span>Skills & Tools</span>
+      </div>
+
+      <div class="skills-grid">
+        <!-- Languages -->
+        <div class="skills-card">
+          <div class="skills-icon"><i class="fa-solid fa-code"></i></div>
+          <h3>Languages</h3>
+          <div class="skills-tags">
+            <span>JavaScript</span>
+            <span>TypeScript</span>
+            <span>PHP</span>
+            <span>Java</span>
+            <span>C</span>
+            <span>Kotlin</span>
+            <span>Dart</span>
+            <span>HTML5</span>
+            <span>CSS3</span>
+          </div>
+        </div>
+
+        <!-- Frameworks & Runtimes -->
+        <div class="skills-card">
+          <div class="skills-icon"><i class="fa-solid fa-layer-group"></i></div>
+          <h3>Frameworks & Runtimes</h3>
+          <div class="skills-tags">
+            <span>React.js</span>
+            <span>Node.js</span>
+            <span>Laravel</span>
+            <span>Tauri (Rust)</span>
+            <span>Electron</span>
+            <span>Flutter</span>
+            <span>Express.js</span>
+          </div>
+        </div>
+
+        <!-- Developer Tools -->
+        <div class="skills-card">
+          <div class="skills-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+          <h3>Tools & Databases</h3>
+          <div class="skills-tags">
+            <span>GitHub</span>
+            <span>Postman</span>
+            <span>Docker</span>
+            <span>PostgreSQL</span>
+            <span>MySQL</span>
+            <span>phpMyAdmin</span>
+            <span>VS Code</span>
+          </div>
+        </div>
+
+        <!-- Soft Skills -->
+        <div class="skills-card">
+          <div class="skills-icon"><i class="fa-solid fa-users"></i></div>
+          <h3>Soft Skills</h3>
+          <div class="skills-tags">
+            <span>Problem Solving</span>
+            <span>Teamwork</span>
+            <span>Communication</span>
+            <span>Presentation</span>
+            <span>Public Speaking</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- -------------- EXPERIENCE BOX ---------------- -->
+    <section class="section" id="experience">
+      <div class="top-header">
+        <h1>Experience</h1>
+        <span>Teaching Assistantships, Research & Bootcamps</span>
+      </div>
+
+      <div class="experience-grid">
+        <!-- Connecting Line -->
+        <svg class="experience-connector-line" viewBox="0 0 1000 1000" preserveAspectRatio="none">
+          <defs>
+            <linearGradient id="exp-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stop-color="#E07A5F" />
+              <stop offset="50%" stop-color="#E9C46A" />
+              <stop offset="100%" stop-color="#E07A5F" />
+            </linearGradient>
+          </defs>
+          <path class="connector-path-bg"
+            d="M 250 125 C 550 125, 650 375, 750 375 C 950 375, 950 625, 250 625 C 50 625, 50 875, 750 875" fill="none"
+            stroke="rgba(224, 122, 95, 0.08)" stroke-width="4" />
+          <path class="connector-path"
+            d="M 250 125 C 550 125, 650 375, 750 375 C 950 375, 950 625, 250 625 C 50 625, 50 875, 750 875" fill="none"
+            stroke="url(#exp-grad)" stroke-width="3" />
+        </svg>
+
+        <!-- Card 1 -->
+        <div class="experience-card interactive-card" data-type="Experience"
+          data-title="Teaching Assistant for Operating Systems & Data Structures" data-subtitle="Institut Teknologi Del"
+          data-date="February 2025 - May 2025" data-icon="fa-solid fa-book-open-reader"
+          data-details='["Assisted in teaching and learning activities for Operating Systems and Algorithm & Data Structures courses by preparing materials, supervising labs, and evaluating student progress.","Facilitated group discussions, provided guidance on OS core principles (threading, memory management) and algorithm designs, and enhanced communication and leadership skills."]'>
+          <div class="card-icon"><i class="fa-solid fa-book-open-reader"></i></div>
+          <span class="card-date">Feb 2025 - May 2025</span>
+          <h3>Teaching Assistant (Operating Systems & Data Structures)</h3>
+          <h4>Institut Teknologi Del</h4>
+          <span class="click-more">Read details <i class="uil uil-arrow-right"></i></span>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="experience-card interactive-card" data-type="Experience"
+          data-title="Teaching Assistant for Physics & Probability Theory" data-subtitle="Institut Teknologi Del"
+          data-date="July 2023 - December 2024" data-icon="fa-solid fa-square-root-variable"
+          data-details='["Assisted in teaching Basic Physics I & II, and Probability & Statistics courses, preparing lecture materials, supervising practicums, and evaluating student performance.","Provided guidance on physics applications, statistical analysis and probability models, while strengthening collaboration and time management skills."]'>
+          <div class="card-icon"><i class="fa-solid fa-square-root-variable"></i></div>
+          <span class="card-date">July 2023 - Dec 2024</span>
+          <h3>Teaching Assistant (Physics & Probability Theory)</h3>
+          <h4>Institut Teknologi Del</h4>
+          <span class="click-more">Read details <i class="uil uil-arrow-right"></i></span>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="experience-card interactive-card" data-type="Experience" data-title="Research Member"
+          data-subtitle="IT DEL Lecturers | Institut Teknologi Del" data-date="May 2024 - November 2024"
+          data-icon="fa-solid fa-flask"
+          data-details='["Collecting datasets for the research conducted by the lecturer and final-year students titled &apos;Performance Analysis of Convolutional Neural Network Algorithm using MobileNetV3 Architecture for Facial Skin Disorder Classification.&apos;","Holding meetings with the lecturer and final-year students to discuss progress of the research, formulate experimental strategies, and evaluate interim results for improving the model and algorithms."]'>
+          <div class="card-icon"><i class="fa-solid fa-flask"></i></div>
+          <span class="card-date">May 2024 - Nov 2024</span>
+          <h3>Research Member</h3>
+          <h4>IT DEL Lecturers | Institut Teknologi Del</h4>
+          <span class="click-more">Read details <i class="uil uil-arrow-right"></i></span>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="experience-card interactive-card" data-type="Experience" data-title="Programming Bootcamp"
+          data-subtitle="IGDX Bootcamp" data-date="May 2024 - September 2024" data-icon="fa-solid fa-gamepad"
+          data-details='["Gained expertise in game development, including immersive storytelling, programming logic, and interactive user experience design.","Applied statistical methods and problem-solving concepts while building interactive games using various programming languages and engine configurations."]'>
+          <div class="card-icon"><i class="fa-solid fa-gamepad"></i></div>
+          <span class="card-date">May 2024 - Sept 2024</span>
+          <h3>Game Programming</h3>
+          <h4>IGDX Bootcamp</h4>
+          <span class="click-more">Read details <i class="uil uil-arrow-right"></i></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- -------------- WORK EXPERIENCE BOX ---------------- -->
+    <section class="section" id="work-experience">
+      <div class="top-header">
+        <h1>Work Experience</h1>
+        <span>Jobs & Internships</span>
+      </div>
+
+      <div class="experience-grid">
+        <!-- Connecting Line -->
+        <svg class="experience-connector-line" viewBox="0 0 1000 1000" preserveAspectRatio="none">
+          <defs>
+            <linearGradient id="work-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stop-color="#E07A5F" />
+              <stop offset="50%" stop-color="#E9C46A" />
+              <stop offset="100%" stop-color="#E07A5F" />
+            </linearGradient>
+          </defs>
+          <path class="connector-path-bg"
+            d="M 250 125 C 550 125, 650 375, 750 375 C 950 375, 950 625, 250 625 C 50 625, 50 875, 750 875" fill="none"
+            stroke="rgba(224, 122, 95, 0.08)" stroke-width="4" />
+          <path class="connector-path"
+            d="M 250 125 C 550 125, 650 375, 750 375 C 950 375, 950 625, 250 625 C 50 625, 50 875, 750 875" fill="none"
+            stroke="url(#work-grad)" stroke-width="3" />
+        </svg>
+
+        <!-- Card 1 -->
+        <div class="experience-card interactive-card" data-type="Work Experience" data-title="Software Engineer"
+          data-subtitle="PT Perintis Kode Global" data-date="June 2025 - Present" data-icon="fa-solid fa-laptop-code"
+          data-details='["Designed and developed responsive web applications and mobile platforms using React, Vite, and Node.js, improving overall platform performance and user experience.","Managed full-cycle production deployment and server configuration.","Collaborated on optimizing application source code, successfully reducing page load times and enhancing platform scalability."]'>
+          <div class="card-icon"><i class="fa-solid fa-laptop-code"></i></div>
+          <span class="card-date">June 2025 - Present</span>
+          <h3>Software Engineer</h3>
+          <h4>PT Perintis Kode Global</h4>
+          <span class="click-more">Read details <i class="uil uil-arrow-right"></i></span>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="experience-card interactive-card" data-type="Work Experience"
+          data-title="Software Engineer Internship" data-subtitle="PT Umalo Sedia Tekno"
+          data-date="June 2025 - December 2025" data-icon="fa-solid fa-user-ninja"
+          data-details='["Developed a cross-platform desktop application for AI-powered face recognition attendance using Electron, React (Vite), and Node.js, ensuring responsive performance and accurate real-time logging.","Designed and implemented secure RESTful APIs and database architecture to manage attendance data, optimize synchronization, and support offline-first capabilities for enterprise environments."]'>
+          <div class="card-icon"><i class="fa-solid fa-user-ninja"></i></div>
+          <span class="card-date">June 2025 - Dec 2025</span>
+          <h3>Software Engineer Intern</h3>
+          <h4>PT Umalo Sedia Tekno</h4>
+          <span class="click-more">Read details <i class="uil uil-arrow-right"></i></span>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="experience-card interactive-card" data-type="Work Experience"
+          data-title="Fullstack Developer Internship" data-subtitle="Zona EBT" data-date="June 2025 - August 2025"
+          data-icon="fa-solid fa-credit-card"
+          data-details='["Developed an end-to-end product payment website using PHP and the Laravel framework, enabling seamless digital transactions for users.","Integrated Midtrans Payment Gateway to handle secure and automated transactions, supporting multiple payment methods (E-wallets, Bank Transfers, and Qris)."]'>
+          <div class="card-icon"><i class="fa-solid fa-credit-card"></i></div>
+          <span class="card-date">June 2025 - Aug 2025</span>
+          <h3>Fullstack Developer Intern</h3>
+          <h4>Zona EBT</h4>
+          <span class="click-more">Read details <i class="uil uil-arrow-right"></i></span>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="experience-card interactive-card" data-type="Work Experience"
+          data-title="Backend Developer Internship" data-subtitle="DB KLIK" data-date="April 2025 - June 2025"
+          data-icon="fa-solid fa-server"
+          data-details='["Developed and optimized a web-based Asset Management System using PHP and the Laravel framework, streamlining internal tracking and resource allocation.","Designed and implemented secure RESTful APIs to facilitate seamless data communication and integration with front-end interfaces."]'>
+          <div class="card-icon"><i class="fa-solid fa-server"></i></div>
+          <span class="card-date">Apr 2025 - June 2025</span>
+          <h3>Backend Developer Intern</h3>
+          <h4>DB KLIK</h4>
+          <span class="click-more">Read details <i class="uil uil-arrow-right"></i></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- -------------- PROJECT BOX ---------------- -->
+    <section class="section" id="projects">
+      <div class="top-header">
+        <h1>Portofolio</h1>
+        <span>My Recent Projects</span>
+      </div>
+
+      <div class="project-grid">
+        <!-- Project 1 -->
+        <div class="project-card interactive-card" data-type="Project" data-title="Altech Equipment Rental Platform"
+          data-subtitle="PT Alltech Rental Sarana Samudera" data-date="Feb 2026 - Apr 2026"
+          data-tech="React,Node.js,Express,REST APIs,Deployment" data-links='{"live": "https://alltechrental.co.id"}'
+          data-icon="fa-solid fa-anchor"
+          data-details='["Architected and developed a full-stack commercial equipment rental platform from scratch using React (Vite) and Node.js.","Designed and implemented secure RESTful APIs to manage dynamic features.","Managed full-cycle production deployment and server configuration."]'>
+          <div class="project-info-top">
+            <span class="project-date">Feb 2026 - Apr 2026</span>
+            <div class="project-card-icon"><i class="fa-solid fa-anchor"></i></div>
+          </div>
+          <h3>Altech Equipment Rental</h3>
+          <p>Architected and developed a full-stack commercial equipment rental platform from scratch using React (Vite)
+            and Node.js.</p>
+          <div class="project-tech">
+            <span>React</span>
+            <span>Node.js</span>
+            <span>Express</span>
+          </div>
+          <span class="click-more">View project specs <i class="uil uil-arrow-right"></i></span>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card interactive-card" data-type="Project" data-title="Snap-Stream Live Platform"
+          data-subtitle="PT Umalo Sedia Tekno" data-date="Oct 2025 - Dec 2025"
+          data-tech="React,TypeScript,Electron,MediaSoup,WebRTC,Socket.io"
+          data-links='{"github": "https://github.com/Riovan716/Snap-Stream.git"}' data-icon="fa-solid fa-video"
+          data-details='["Engineered a professional real-time live streaming and recording platform using React, TypeScript, and Node.js (Express), wrapped in an Electron desktop shell.","Integrated MediaSoup as a WebRTC SFU for ultra-low latency multimedia streaming and automated video recording workflows."]'>
+          <div class="project-info-top">
+            <span class="project-date">Oct 2025 - Dec 2025</span>
+            <div class="project-card-icon"><i class="fa-solid fa-video"></i></div>
+          </div>
+          <h3>Snap-Stream</h3>
+          <p>Engineered a professional real-time live streaming and recording platform using React, TypeScript, and
+            Node.js (Express).</p>
+          <div class="project-tech">
+            <span>React</span>
+            <span>TypeScript</span>
+            <span>Electron</span>
+          </div>
+          <span class="click-more">View project specs <i class="uil uil-arrow-right"></i></span>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card interactive-card" data-type="Project" data-title="AI Face Recognition Attendance"
+          data-subtitle="PT Umalo Sedia Tekno" data-date="June 2025 - Sept 2025"
+          data-tech="Electron,React,Node.js,Sequelize,MySQL,Biometrics"
+          data-links='{"github": "https://github.com/Riovan716/face_recognition.git"}' data-icon="fa-solid fa-id-card"
+          data-details='["Developed a desktop-based automated attendance system by integrating face recognition algorithms within Electron and React.","Built a robust Node.js backend using Sequelize ORM and MySQL to manage data synchronization and support offline-first capabilities."]'>
+          <div class="project-info-top">
+            <span class="project-date">June 2025 - Sept 2025</span>
+            <div class="project-card-icon"><i class="fa-solid fa-id-card"></i></div>
+          </div>
+          <h3>AI Face Attendance</h3>
+          <p>Developed a desktop-based automated attendance system by integrating face recognition within Electron and
+            React.</p>
+          <div class="project-tech">
+            <span>Electron</span>
+            <span>React</span>
+            <span>Node.js</span>
+          </div>
+          <span class="click-more">View project specs <i class="uil uil-arrow-right"></i></span>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="project-card interactive-card" data-type="Project" data-title="SMA N 1 Balige PKM Portal"
+          data-subtitle="SMA Negeri 1 Balige" data-date="Oct 2024 - Nov 2024"
+          data-tech="Laravel,PHP,MySQL,HTML,CSS,JavaScript" data-links='{}' data-icon="fa-solid fa-graduation-cap"
+          data-details='["Developed a web-based portal to support the Student Creativity Program (PKM) at SMA Negeri 1 Balige.","Facilitated the submission, review, and feedback loops for student proposal management.","Designed structured progress tracking and guidance modules to improve student-mentor collaborations."]'>
+          <div class="project-info-top">
+            <span class="project-date">Oct 2024 - Nov 2024</span>
+            <div class="project-card-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+          </div>
+          <h3>SMA N 1 PKM Portal</h3>
+          <p>A structured platform supporting SMA Negeri 1 Balige students to submit proposals and track evaluations.
+          </p>
+          <div class="project-tech">
+            <span>Laravel</span>
+            <span>PHP</span>
+            <span>MySQL</span>
+          </div>
+          <span class="click-more">View project specs <i class="uil uil-arrow-right"></i></span>
+        </div>
+
+        <!-- Project 5 -->
+        <div class="project-card interactive-card" data-type="Project" data-title="S1 Informatika Portal (S1IF)"
+          data-subtitle="Informatics Study Program | Institut Teknologi Del" data-date="Sept 2024 - Dec 2024"
+          data-tech="Laravel,PHP,MySQL,HTML,CSS,JavaScript"
+          data-links='{"github": "https://github.com/Riovan716/WEBSITE-INFORMATIKA"}' data-icon="fa-solid fa-university"
+          data-details='["Developed a centralized Student Information System (S1IF) to streamline academic data management.","Designed modules for student profile administration, academic records tracking, and attendance monitoring.","Implemented secure role-based access control, optimizing data transparency and accessibility for faculty, students, and admins."]'>
+          <div class="project-info-top">
+            <span class="project-date">Sept 2024 - Dec 2024</span>
+            <div class="project-card-icon"><i class="fa-solid fa-university"></i></div>
+          </div>
+          <h3>S1IF Academic Portal</h3>
+          <p>A centralized Student Information System developed for Informatics Study Program at IT Del to manage
+            academic records.</p>
+          <div class="project-tech">
+            <span>Laravel</span>
+            <span>PHP</span>
+            <span>MySQL</span>
+          </div>
+          <span class="click-more">View project specs <i class="uil uil-arrow-right"></i></span>
+        </div>
+
+        <!-- Project 6 -->
+        <div class="project-card interactive-card" data-type="Project" data-title="Honestest Exam Desktop App"
+          data-subtitle="Institut Teknologi Del" data-date="Sept 2024 - Dec 2024"
+          data-tech="Tauri,Rust,React,Security,Statistics"
+          data-links='{"github": "https://github.com/Riovan716/dekstop_app_honestest_tauri.git"}'
+          data-icon="fa-solid fa-shield-halved"
+          data-details='["Designed and implemented an efficient and secure exam desktop application using the Tauri framework (Rust backend and React/JS frontend).","Proved hardware efficiency and cheating reduction through statistical analysis."]'>
+          <div class="project-info-top">
+            <span class="project-date">Sept 2024 - Dec 2024</span>
+            <div class="project-card-icon"><i class="fa-solid fa-shield-halved"></i></div>
+          </div>
+          <h3>Honestest Exam App</h3>
+          <p>Designed and implemented an exam desktop application using the Tauri framework as a high-performance
+            alternative to Electron.</p>
+          <div class="project-tech">
+            <span>Tauri</span>
+            <span>Rust</span>
+            <span>React</span>
+          </div>
+          <span class="click-more">View project specs <i class="uil uil-arrow-right"></i></span>
+        </div>
+
+        <!-- Project 7 -->
+        <div class="project-card interactive-card" data-type="Project" data-title="Gamified Health Platform"
+          data-subtitle="BPJS Kesehatan Healthkathon 2024" data-date="Sept 2024 - Nov 2024"
+          data-tech="Laravel,PHP,MySQL,HTML,CSS,JavaScript"
+          data-links='{"github": "https://github.com/Riovan716/HEALTHKACTON"}' data-icon="fa-solid fa-heart-pulse"
+          data-details='["Developed a gamified health web system for the national BPJS Kesehatan Healthkathon, ranking in the Top 65 of 1,100+ teams.","Integrated daily health challenges, leaderboards, and virtual achievements to encourage preventative healthcare.","Collaborated closely with a multidisciplinary team to implement interactive user engagement structures."]'>
+          <div class="project-info-top">
+            <span class="project-date">Sept 2024 - Nov 2024</span>
+            <div class="project-card-icon"><i class="fa-solid fa-heart-pulse"></i></div>
+          </div>
+          <h3>Gamified Health Platform</h3>
+          <p>A preventive healthcare application integrating challenges and rewards, built for the BPJS Healthkathon.
+          </p>
+          <div class="project-tech">
+            <span>Laravel</span>
+            <span>PHP</span>
+            <span>MySQL</span>
+          </div>
+          <span class="click-more">View project specs <i class="uil uil-arrow-right"></i></span>
+        </div>
+
+        <!-- Project 8 -->
+        <div class="project-card interactive-card" data-type="Project" data-title="Find Me in Pniel"
+          data-subtitle="IGDX Indonesia" data-date="May 2024 - Sept 2024"
+          data-tech="Game Dev,AI Enemy,Storytelling,Level Design"
+          data-links='{"github": "https://github.com/mitsuha19/LYNCH-VIEX.git"}' data-icon="fa-solid fa-ghost"
+          data-details='["Developed Find Me in Pniel, a horror game featuring immersive storytelling, AI-driven enemy behavior, and strategic resource management.","Designed level environments and core gameplay mechanics, collaborating in a cross-functional team."]'>
+          <div class="project-info-top">
+            <span class="project-date">May 2024 - Sept 2024</span>
+            <div class="project-card-icon"><i class="fa-solid fa-ghost"></i></div>
+          </div>
+          <h3>Find Me in Pniel</h3>
+          <p>Developed Find Me in Pniel, a horror game featuring immersive storytelling, AI-driven enemy behavior, and
+            resource management.</p>
+          <div class="project-tech">
+            <span>Game Dev</span>
+            <span>AI Enemy</span>
+            <span>Storytelling</span>
+          </div>
+          <span class="click-more">View project specs <i class="uil uil-arrow-right"></i></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- -------------- ORGANIZATIONS BOX ---------------- -->
+    <section class="section" id="organizations">
+      <div class="top-header">
+        <h1>Organizations</h1>
+        <span>Leadership Experience</span>
+      </div>
+
+      <div class="organizations-grid">
+        <!-- Org 1 -->
+        <div class="org-card interactive-card" data-type="Organization" data-title="Vice Chair"
+          data-subtitle="Badan Eksekutif Mahasiswa (BEM)" data-date="December 2024 - January 2025"
+          data-icon="fa-solid fa-users-line"
+          data-details='["Led BEM in managing organizational programs and strategic initiatives.","Coordinated interdepartmental collaboration and ensured effective communication.","Represented BEM in engagements with internal and external stakeholders.","Supported student welfare programs and organizational development efforts."]'>
+          <div class="org-icon"><i class="fa-solid fa-users-line"></i></div>
+          <span class="org-date">Dec 2024 - Jan 2025</span>
+          <h3>Vice Chair</h3>
+          <h4>Badan Eksekutif Mahasiswa (BEM)</h4>
+          <span class="click-more">Read details <i class="uil uil-arrow-right"></i></span>
+        </div>
+
+        <!-- Org 2 -->
+        <div class="org-card interactive-card" data-type="Organization" data-title="Vice Chair of Division"
+          data-subtitle="Informatics Student Association" data-date="July 2023 - June 2024"
+          data-icon="fa-solid fa-sitemap"
+          data-details='["Led group discussions on project planning for the interest and talent division.","Arranged permissions and licenses for the implementation of activities.","Established cooperation with external parties to support organizational events."]'>
+          <div class="org-icon"><i class="fa-solid fa-sitemap"></i></div>
+          <span class="org-date">July 2023 - June 2024</span>
+          <h3>Vice Chair of Division</h3>
+          <h4>Informatics Student Association</h4>
+          <span class="click-more">Read details <i class="uil uil-arrow-right"></i></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- -------------- CONTACT BOX ---------------- -->
+    <section class="section" id="contact">
+      <div class="top-header">
+        <h1>Get In Touch</h1>
+        <span>Let's Talk</span>
+      </div>
+
+      <div class="contact-card">
+        <h2>Let's connect! <i class="uil uil-corner-right-down"></i></h2>
+        <p>Feel free to reach out for internship opportunities, collaborations, or just to say hello.</p>
+
+        <div class="contact-details-list">
+          <a href="mailto:riovansihombing3@gmail.com" class="contact-detail-item">
+            <i class="uil uil-envelope"></i>
+            <div>
+              <span>Email Me</span>
+              <strong>riovansihombing3@gmail.com</strong>
+            </div>
+          </a>
+          <a href="https://wa.me/6281376463374/?text=Hello%20Riovan" target="_blank" rel="noopener noreferrer"
+            class="contact-detail-item">
+            <i class="uil uil-phone"></i>
+            <div>
+              <span>WhatsApp / Call</span>
+              <strong>+62 813-7646-3374</strong>
+            </div>
+          </a>
+          <a href="https://www.linkedin.com/in/riovan-samuel-sihombing-044477285/" target="_blank"
+            rel="noopener noreferrer" class="contact-detail-item">
+            <i class="fa-brands fa-linkedin-in"></i>
+            <div>
+              <span>LinkedIn</span>
+              <strong>riovan-samuel-sihombing-044477285</strong>
+            </div>
+          </a>
+          <a href="https://github.com/Riovan716" target="_blank" rel="noopener noreferrer" class="contact-detail-item">
+            <i class="fa-brands fa-github"></i>
+            <div>
+              <span>GitHub</span>
+              <strong>Riovan716</strong>
+            </div>
           </a>
         </div>
-        <div class="bottom-footer">
-          <p>
-            Copyright &copy;
-            <a href="#home" style="text-decoration: none">Riovan Samuel</a> -
-            All rights reserved
-          </p>
-        </div>
-      </footer>
-
-      <!-- modal box icon detail -->
-
-      <div class="modal" id="item-detail-modal">
-        <div class="modal-container">
-          <div class="close-icon">
-            <i class="fa-solid fa-x"></i>
-          </div>
-          <div class="modal-content">
-            <div class="project-content">
-              <h3>My Projects</h3>
-              <p>1. Create A Portofolio Website</p>
-            </div>
-          </div>
-        </div>
       </div>
+    </section>
+  </main>
 
-      <div class="modal1" id="item-detail-modal1">
-        <div class="modal-container1">
-          <div class="close-icon">
-            <i class="fa-solid fa-x"></i>
-          </div>
-          <div class="modal-content1">
-            <div class="project-content1">
-              <h3>experirence</h3>
-              <p>
-                1. Teaching Assistant For Basic Physics I<br />
-                2. Teaching Assistant For Basic Physics II
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="modal2" id="item-detail-modal2">
-        <div class="modal-container2">
-          <div class="close-icon">
-            <i class="fa-solid fa-x"></i>
-          </div>
-          <div class="modal-content2">
-            <div class="project-content2">
-              <h3>Hobby</h3>
-              <p>
-                1. Playing A Game<br />
-                2. Listening To Songs<br />
-                3. Playing Music Instruments
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- modal box icon detail end -->
+  <!-- --------------- FOOTER --------------- -->
+  <footer>
+    <div class="top-footer">
+      <p>Riovan Samuel Sihombing</p>
     </div>
-    <!-- ----- TYPING JS Link ----- -->
-    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
-    <!-- ----- SCROLL REVEAL JS Link----- -->
-    <script src="https://unpkg.com/scrollreveal"></script>
-    <!-- ----- MAIN JS ----- -->
-    <script src="assets/js/main.js"></script>
-  </body>
+    <div class="middle-footer">
+      <ul class="footer-menu">
+        <li class="footer_menu_list">
+          <a href="#home">Home</a>
+        </li>
+        <li class="footer_menu_list">
+          <a href="#about">About</a>
+        </li>
+        <li class="footer_menu_list">
+          <a href="#skills">Skills</a>
+        </li>
+        <li class="footer_menu_list">
+          <a href="#experience">Experience</a>
+        </li>
+        <li class="footer_menu_list">
+          <a href="#work-experience">Work Experience</a>
+        </li>
+        <li class="footer_menu_list">
+          <a href="#projects">Projects</a>
+        </li>
+        <li class="footer_menu_list">
+          <a href="#organizations">Organizations</a>
+        </li>
+        <li class="footer_menu_list">
+          <a href="#contact">Contact</a>
+        </li>
+      </ul>
+    </div>
+    <div class="footer-social-icons">
+      <a href="https://github.com/Riovan716" target="_blank" rel="noopener noreferrer" class="github-icon"><i
+          class="fa-brands fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/riovan-samuel-sihombing-044477285/" target="_blank" rel="noopener noreferrer"
+        class="linkedin-icon"><i class="fa-brands fa-linkedin-in"></i></a>
+      <a href="https://wa.me/6281376463374/?text=Hello%20Riovan" target="_blank" rel="noopener noreferrer"
+        class="whatsapp-icon"><i class="fa-brands fa-whatsapp"></i></a>
+      <a href="https://www.instagram.com/riovan_samuel/" target="_blank" rel="noopener noreferrer"
+        class="instagram-icon"><i class="fa-brands fa-instagram"></i></a>
+    </div>
+    <div class="bottom-footer">
+      <p>
+        Copyright &copy; <a href="#home">Riovan Samuel</a> - All rights reserved
+      </p>
+    </div>
+  </footer>
+
+  <!-- --------------- DYNAMIC MODAL BOX --------------- -->
+  <div class="modal-overlay" id="detail-modal">
+    <div class="modal-card">
+      <div class="modal-close"><i class="fa-solid fa-xmark"></i></div>
+      <div class="modal-scroll-content">
+        <div class="modal-header">
+          <div class="modal-icon-wrapper"><i class="fa-solid fa-laptop-code" id="modal-icon"></i></div>
+          <div class="modal-title-group">
+            <span class="modal-type" id="modal-type">WORK EXPERIENCE</span>
+            <h3 class="modal-title" id="modal-title">Software Engineer</h3>
+            <h4 class="modal-subtitle" id="modal-subtitle">PT Perintis Kode Global</h4>
+            <span class="modal-date" id="modal-date"><i class="uil uil-calendar-alt"></i> June 2025 - Present</span>
+          </div>
+        </div>
+        <div class="modal-body" id="modal-body">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ----- TYPING JS Link ----- -->
+  <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+  <!-- ----- SCROLL REVEAL JS Link----- -->
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <!-- ----- MAIN JS ----- -->
+  <script src="assets/js/main.js"></script>
+</body>
+
 </html>

@@ -1,6 +1,6 @@
 function myMenuFunction() {
-  var menuBtn = document.getElementById("myNavMenu");
-  var navLogo = document.querySelector(".nav-logo");
+  const menuBtn = document.getElementById("myNavMenu");
+  const navLogo = document.querySelector(".nav-logo");
 
   if (menuBtn.classList.contains("responsive")) {
     menuBtn.classList.remove("responsive");
@@ -8,16 +8,17 @@ function myMenuFunction() {
     menuBtn.classList.add("responsive");
   }
 
-  // Menutup navbar jika logo atau area di luar navbar diklik
+  // Close navbar when clicking the logo
   navLogo.addEventListener("click", function () {
     if (menuBtn.classList.contains("responsive")) {
       menuBtn.classList.remove("responsive");
     }
   });
 
+  // Close navbar when clicking outside the navbar
   document.addEventListener("click", function (event) {
-    var isClickInsideNav = menuBtn.contains(event.target);
-    var isClickInsideNavBtn = document
+    const isClickInsideNav = menuBtn.contains(event.target);
+    const isClickInsideNavBtn = document
       .querySelector(".nav-menu-btn")
       .contains(event.target);
 
@@ -31,11 +32,12 @@ function myMenuFunction() {
   });
 }
 
+// Add shadow to header on scroll
 function headerShadow() {
   const navHeader = document.getElementById("header");
 
   if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-    navHeader.style.boxShadow = "0 1px 6px rgba(0, 0, 0, 0.1)";
+    navHeader.style.boxShadow = "0 4px 20px rgba(0, 0, 0, 0.08)";
     navHeader.style.height = "70px";
     navHeader.style.lineHeight = "70px";
   } else {
@@ -45,64 +47,63 @@ function headerShadow() {
   }
 }
 
+window.addEventListener("scroll", headerShadow);
+
 /* ----- TYPING EFFECT ----- */
 var typingEffect = new Typed(".typedText", {
-  strings: ["bangun", "makan", "mandi", "tidur"],
+  strings: ["a Software Engineer"],
   loop: true,
-  typeSpeed: 200,
-  backSpeed: 100,
+  typeSpeed: 90,
+  backSpeed: 60,
   backDelay: 2000,
 });
 
 /* ----- ## -- SCROLL REVEAL ANIMATION -- ## ----- */
 const sr = ScrollReveal({
   origin: "top",
-  distance: "80px",
-  duration: 2000,
-  reset: true,
+  distance: "60px",
+  duration: 1500,
+  reset: false, // Turn off reset for a smoother, one-time reveal experience
 });
 
 /* -- HOME -- */
 sr.reveal(".featured-text-card", {});
 sr.reveal(".featured-name", { delay: 100 });
-sr.reveal(".featured-text-info", { delay: 200 });
+sr.reveal(".featured-text-info", { delay: 150 });
 sr.reveal(".featured-text-btn", { delay: 200 });
-sr.reveal(".social_icons", { delay: 200 });
+sr.reveal(".social_icons", { delay: 250 });
 sr.reveal(".featured-image", { delay: 300 });
-sr.reveal(".cv", { delay: 300 });
 
-/* -- PROJECT BOX -- */
-sr.reveal(".project-box", { interval: 200 });
-
-/* -- HEADINGS -- */
+/* -- HEADINGS & GRIDS -- */
 sr.reveal(".top-header", {});
+sr.reveal(".skills-card", { interval: 150 });
+sr.reveal(".project-card", { interval: 150 });
+sr.reveal(".org-card", { interval: 150 });
 
 /* ----- ## -- SCROLL REVEAL LEFT_RIGHT ANIMATION -- ## ----- */
 
 /* -- ABOUT INFO & CONTACT INFO -- */
 const srLeft = ScrollReveal({
   origin: "left",
-  distance: "80px",
-  duration: 2000,
-  reset: true,
+  distance: "60px",
+  duration: 1500,
+  reset: false,
 });
 
-srLeft.reveal(".about-info", { delay: 100 });
-srLeft.reveal(".contact-info", { delay: 100 });
+srLeft.reveal(".about-card", { delay: 100 });
+srLeft.reveal(".contact-card", { delay: 100 });
 
 /* -- ABOUT SKILLS & FORM BOX -- */
 const srRight = ScrollReveal({
   origin: "right",
-  distance: "80px",
-  duration: 2000,
-  reset: true,
+  distance: "60px",
+  duration: 1500,
+  reset: false,
 });
 
-srRight.reveal(".skills-box", { delay: 100 });
-srRight.reveal(".form-control", { delay: 100 });
+srRight.reveal(".form-container", { delay: 100 });
 
 /* ----- CHANGE ACTIVE LINK ----- */
-
 const sections = document.querySelectorAll("section[id]");
 
 function scrollActive() {
@@ -110,78 +111,120 @@ function scrollActive() {
 
   sections.forEach((current) => {
     const sectionHeight = current.offsetHeight,
-      sectionTop = current.offsetTop - 50,
+      sectionTop = current.offsetTop - 120, // Adjusted offset to align better with scrolling
       sectionId = current.getAttribute("id");
 
-    if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-      document
-        .querySelector(".nav-menu a[href*=" + sectionId + "]")
-        .classList.add("active-link");
-    } else {
-      document
-        .querySelector(".nav-menu a[href*=" + sectionId + "]")
-        .classList.remove("active-link");
+    const navLink = document.querySelector(".nav-menu a[href*=" + sectionId + "]");
+    if (navLink) {
+      if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+        navLink.classList.add("active-link");
+      } else {
+        navLink.classList.remove("active-link");
+      }
     }
   });
 }
 
 window.addEventListener("scroll", scrollActive);
 
-//modal box
+/* ----- DYNAMIC MODAL INTERACTION ----- */
+const modalOverlay = document.getElementById("detail-modal");
+const modalClose = document.querySelector(".modal-close");
+const interactiveCards = document.querySelectorAll(".interactive-card");
 
-const itemDetailModal = document.querySelector("#item-detail-modal");
-const itemDetailModal1 = document.querySelector("#item-detail-modal1");
-const itemDetailModal2 = document.querySelector("#item-detail-modal2");
-const itemDetailButtons = document.querySelectorAll(".item-detail-button");
-const itemDetailButtons1 = document.querySelectorAll(".item-detail-button1");
-const itemDetailButtons2 = document.querySelectorAll(".item-detail-button2");
+// Populate and open modal
+interactiveCards.forEach(card => {
+  card.addEventListener("click", () => {
+    const type = card.getAttribute("data-type");
+    const title = card.getAttribute("data-title");
+    const subtitle = card.getAttribute("data-subtitle");
+    const date = card.getAttribute("data-date");
+    const icon = card.getAttribute("data-icon") || "fa-solid fa-laptop-code";
+    const detailsRaw = card.getAttribute("data-details");
+    const techRaw = card.getAttribute("data-tech");
+    const linksRaw = card.getAttribute("data-links");
 
-itemDetailButtons.forEach((btn) => {
-  btn.onclick = (e) => {
-    itemDetailModal.style.display = "flex";
-    e.preventDefault();
-  };
+    // Title group population
+    document.getElementById("modal-type").textContent = type.toUpperCase();
+    document.getElementById("modal-title").textContent = title;
+    document.getElementById("modal-subtitle").textContent = subtitle || "";
+    document.getElementById("modal-date").innerHTML = `<i class="uil uil-calendar-alt"></i> ${date}`;
+    document.getElementById("modal-icon").className = icon;
+
+    // Body content construction
+    let bodyHTML = "";
+
+    // Bullet points
+    if (detailsRaw) {
+      try {
+        const details = JSON.parse(detailsRaw);
+        if (details && details.length > 0) {
+          bodyHTML += '<ul class="modal-list">';
+          details.forEach(item => {
+            bodyHTML += `<li>${item}</li>`;
+          });
+          bodyHTML += "</ul>";
+        }
+      } catch (e) {
+        console.error("Failed to parse card details JSON", e);
+      }
+    }
+
+    // Technology Tags
+    if (techRaw) {
+      const tags = techRaw.split(",");
+      bodyHTML += '<div class="modal-tech-group"><h5>Tech Stack</h5><div class="modal-tech-tags">';
+      tags.forEach(tag => {
+        bodyHTML += `<span>${tag}</span>`;
+      });
+      bodyHTML += "</div></div>";
+    }
+
+    // Action links
+    if (linksRaw) {
+      try {
+        const links = JSON.parse(linksRaw);
+        if (links && (links.github || links.live)) {
+          bodyHTML += '<div class="modal-links">';
+          if (links.github) {
+            bodyHTML += `<a href="${links.github}" target="_blank" rel="noopener noreferrer" class="btn modal-btn"><i class="fa-brands fa-github"></i> Repository</a>`;
+          }
+          if (links.live) {
+            bodyHTML += `<a href="${links.live}" target="_blank" rel="noopener noreferrer" class="btn blue-btn modal-btn"><i class="fa-solid fa-earth-americas"></i> Live Website</a>`;
+          }
+          bodyHTML += "</div>";
+        }
+      } catch (e) {
+        console.error("Failed to parse card links JSON", e);
+      }
+    }
+
+    document.getElementById("modal-body").innerHTML = bodyHTML;
+
+    // Show modal with animation
+    modalOverlay.classList.add("active");
+    document.body.style.overflow = "hidden"; // Prevent scrolling behind modal
+  });
 });
 
-itemDetailButtons1.forEach((btn) => {
-  btn.onclick = (e) => {
-    itemDetailModal1.style.display = "flex";
-    e.preventDefault();
-  };
-});
+// Close modal
+function closeModal() {
+  modalOverlay.classList.remove("active");
+  document.body.style.overflow = ""; // Re-enable scroll
+}
 
-itemDetailButtons2.forEach((btn) => {
-  btn.onclick = (e) => {
-    itemDetailModal2.style.display = "flex";
-    e.preventDefault();
-  };
-});
+modalClose.addEventListener("click", closeModal);
 
-//close icon modal
-
-document.querySelector(".modal .close-icon").onclick = (e) => {
-  itemDetailModal.style.display = "none";
-  e.preventDefault();
-};
-
-document.querySelector(".modal1 .close-icon").onclick = (e) => {
-  itemDetailModal1.style.display = "none";
-  e.preventDefault();
-};
-
-document.querySelector(".modal2 .close-icon").onclick = (e) => {
-  itemDetailModal2.style.display = "none";
-  e.preventDefault();
-};
-
-//klik diluar modal
-
-window.onclick = (e) => {
-  if (e.target === itemDetailModal) {
-    itemDetailModal.style.display = "none";
-  } else if (e.target === itemDetailModal1) {
-    itemDetailModal1.style.display = "none";
-  } else if (e.target === itemDetailModal2) {
-    itemDetailModal2.style.display = "none";
+modalOverlay.addEventListener("click", (e) => {
+  if (e.target === modalOverlay) {
+    closeModal();
   }
-};
+});
+
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape" && modalOverlay.classList.contains("active")) {
+    closeModal();
+  }
+});
+
+
